@@ -4,8 +4,8 @@ node.js cài đặt rất dễ dàng trên môi trường linux như Ubuntu. Tuy
 Hướng dẫn này cài đặt bản node.js mới nhất vào thời điểm hiện nay (4.1.1) cùng bản npm mới nhất 3.3.4
 
 ### Mục lục
-* [Cài đặt node.js và npm](#part-1)
-* [Cài đặt môi trường cho Windows](#part-2)
+* [Cài đặt node.js và npm](#cài-đặt-node.js-và-npm)
+* [Cài đặt môi trường cho Windows](#cài-đặt-môi-trường-cho-Windows)
   - [Python 2.7.0](#python-2.7.0)
   - [Visual Studio 2013](#vs2013)
   - [Các cập nhật](#capnhat)
