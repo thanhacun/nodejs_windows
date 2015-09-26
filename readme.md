@@ -1,5 +1,6 @@
 # Cài đặt node.js trên Windows
-> node.js cài đặt rất dễ dàng trên môi trường linux như Ubuntu. Tuy nhiên khi cài trên Windows thì lại rất phiền phức. Bài viết này ghi lại kinh nghiệm của tác giả khi cài đặt node.js trên Windows 10.
+> **Update** Cho đến thời điểm này, tốt nhất nên sử dụng node@2.7.latest và npm@2.latest
+node.js cài đặt rất dễ dàng trên môi trường linux như Ubuntu. Tuy nhiên khi cài trên Windows thì lại rất phiền phức. Bài viết này ghi lại kinh nghiệm của tác giả khi cài đặt node.js trên Windows 10.
 Hướng dẫn này cài đặt bản node.js mới nhất vào thời điểm hiện nay (4.1.1) cùng bản npm mới nhất 3.3.4
 
 ### Mục lục
@@ -8,6 +9,9 @@ Hướng dẫn này cài đặt bản node.js mới nhất vào thời điểm h
   - [Python 2.7.0](#python-2.7.0)
   - [Visual Studio 2013](#vs2013)
   - [Các cập nhật](#capnhat)
+* [Một số lưu ý khác](#part-3)
+  - [Cài đặt tesseract mới nhất trong Windows](#tesseract)
+  - [Cài đặt PhantomJS trong Windows](#phantomjs)
 
 ## Cài đặt node.js và npm
 Cài đặt node.js trên Windows như cài đặt các phần mềm thông thường khác trên Windows.
@@ -22,7 +26,7 @@ Cài đặt node.js trên Windows như cài đặt các phần mềm thông thư
     Dùng `npm config set prefix đường\dẫn\` để định nghĩa thư mục lưu giữ các module global
     Đừng quên vào Windows, Advanced Settings, Đặt biến đường dẫn trỏ tới thư mục này
 
-## Cài đặt môi trường cho Windows ##
+##Cài đặt môi trường cho Windows
 Đến đây thì cũng chưa có gì là phức tạp, tuy nhiên khi bắt đầu xây dựng ứng dụng và sử dụng các module hỗ trợ cần thiết, nodejs sử dụng node-gyp nôm na để built các ứng dụng từ file nguồn. Trong môi trường linux, chỉ cẩn cài đặt bộ essential-build là đủ. Trong Windows phức tạp hơn và hay gặp lỗi.
   1. Python 2.7.0: nodejs cho đến lúc này sử dụng python 2.7 chứ không phải 3.x. Vậy hãy chắc chắn:
     * python 2.7 có cài đặt trên máy
