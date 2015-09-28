@@ -1,6 +1,5 @@
 # Cài đặt node.js trên Windows
-> **Update** Cho đến thời điểm này, tốt nhất nên sử dụng node@2.7.latest và npm@2.latest
-node.js cài đặt rất dễ dàng trên môi trường linux như Ubuntu. Tuy nhiên khi cài trên Windows thì lại rất phiền phức. Bài viết này ghi lại kinh nghiệm của tác giả khi cài đặt node.js trên Windows 10.
+> **Update** Cho đến thời điểm này, tốt nhất nên sử dụng node@2.7.latest và npm@2.latest. Mặc dù node.js cài đặt rất dễ dàng trên môi trường linux như Ubuntu. Tuy nhiên khi cài trên Windows thì lại rất phiền phức. Bài viết này ghi lại kinh nghiệm của tác giả khi cài đặt node.js trên Windows 10.
 Hướng dẫn này cài đặt bản node.js mới nhất vào thời điểm hiện nay (4.1.1) cùng bản npm mới nhất 3.3.4
 
 ### Mục lục
@@ -9,7 +8,7 @@ Hướng dẫn này cài đặt bản node.js mới nhất vào thời điểm h
   - [Python 2.7.0](#python-2.7.0)
   - [Visual Studio 2013](#vs2013)
   - [Các cập nhật](#capnhat)
-* [Một số lưu ý khác](#part-3)
+* [Mot so luu y huu ich](#mot-so-luu-y-huu-ich)
   - [Cài đặt tesseract mới nhất trong Windows](#tesseract)
   - [Cài đặt PhantomJS trong Windows](#phantomjs)
 
@@ -26,7 +25,7 @@ Cài đặt node.js trên Windows như cài đặt các phần mềm thông thư
     Dùng `npm config set prefix đường\dẫn\` để định nghĩa thư mục lưu giữ các module global
     Đừng quên vào Windows, Advanced Settings, Đặt biến đường dẫn trỏ tới thư mục này
 
-##Cài đặt môi trường cho Windows
+## Cài đặt môi trường cho Windows
 Đến đây thì cũng chưa có gì là phức tạp, tuy nhiên khi bắt đầu xây dựng ứng dụng và sử dụng các module hỗ trợ cần thiết, nodejs sử dụng node-gyp nôm na để built các ứng dụng từ file nguồn. Trong môi trường linux, chỉ cẩn cài đặt bộ essential-build là đủ. Trong Windows phức tạp hơn và hay gặp lỗi.
   1. Python 2.7.0: nodejs cho đến lúc này sử dụng python 2.7 chứ không phải 3.x. Vậy hãy chắc chắn:
     * python 2.7 có cài đặt trên máy
@@ -35,3 +34,10 @@ Cài đặt node.js trên Windows như cài đặt các phần mềm thông thư
   2. Visual Studio 2013
   Không biết có cách nào nhẹ nhàng hơn không, nhưng tác giả đã phải sử dụng đến biện pháp này: Cài đặt Visual Studio 2013 (express) download trên trang web của Microsoft khoảng 6GB
   3. Các cập nhật khác
+
+## Mot so luu y huu ich
+Dưới đây liệt kê 1 số lưu ý rút ra từ kinh nghiệm triển khai của tác giả
+  1. Cài đặt tesseract trong Windows
+  Tesseract là phần mềm nhận diện văn bảo (OCR) rất phù hợp trong việc sử dụng để dịch các captcha. Tuy nhiên bản chạy cho Windows trên trang web của phần mềm chưa phải là bản mới nhất, và thường đưa ra kết quả không chính xác. Để có thể build được bản mới nhất làm theo những bước sau.
+  2. PhantomJS
+  Nếu phải thường xuyên lấy các thông tin từ trang web xuống (web scrapping), PhantomJS là 1 cứu cánh. Đây là phần mềm dạng headless browser cho phép làm rất nhiều việc.
